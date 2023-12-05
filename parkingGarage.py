@@ -21,8 +21,12 @@ class ParkingGarage:
         if ticket_number in self.current_ticket and not self.current_ticket[ticket_number]['paid']:
             payment_amount = input("Enter the payment amount: ")
             if payment_amount:
-                print("Ticket paid! You have 15 minutes to leave.")
-                self.current_ticket[ticket_number]['paid'] = True
+                payment_amount = float(payment_amount)
+                if payment_amount >= 15.0:
+                    print("Ticket paid! You have 15 minutes to leave.")
+                    self.current_ticket[ticket_number]['paid'] = True
+                else:
+                    print("Payment amount must be at least $15.00")
             else:
                 print("Payment amount cannot be empty.")
         else:
@@ -36,10 +40,14 @@ class ParkingGarage:
             else:
                 payment_amount = input("Please pay for parking: ")
                 if payment_amount:
-                    print("Thank you! Have a nice day.")
-                    self.current_ticket[ticket_number]['paid'] = True
-                    self.parking_spaces.append(self.current_ticket[ticket_number]['parking_space'])
-                    self.tickets.append(ticket_number)
+                    payment_amount = float(payment_amount)
+                    if payment_amount >= 15.0:
+                        print("Thank you! Have a nice day.")
+                        self.current_ticket[ticket_number]['paid'] = True
+                        self.parking_spaces.append(self.current_ticket[ticket_number]['parking_space'])
+                        self.tickets.append(ticket_number)
+                    else:
+                        print("Payment amount must be at least $15.00")
                 else:
                     print("Payment amount cannot be empty.")
         else:
