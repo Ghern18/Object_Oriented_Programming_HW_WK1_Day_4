@@ -58,12 +58,24 @@ garage.takeTicket()
 garage.payForParking()
 garage.leaveGarage()
 
-       # self.ticket [item] = {'quantity' : quantity}
-        
-   # def remove_parking (self, item):
-       # if item in self.ticket [item]:
+def driver():
+    garage = ParkingGarage(total_tickets=30, total_parking_spaces=30)
 
-   # def display_payment(self):
-        #for item
-#def driver():
-    #while True:?
+    while True:
+        print("\n1. Take a ticket\n2. Pay for parking\n3. Leave the garage\n4. Exit")
+        choice = input("Enter your choice (1-4): ")
+
+        if choice == '1':
+            garage.takeTicket()
+        elif choice == '2':
+            garage.payForParking()
+        elif choice == '3':
+            garage.leaveGarage()
+        elif choice == '4':
+            print("Exiting the garage.")
+            break
+        else:
+            print("Invalid choice. Please enter a number between 1 and 4.")
+
+if __name__ == "__main__":
+    driver()
