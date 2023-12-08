@@ -44,4 +44,4 @@ When the project is completed, commit the final changes, sync all pull requests,
 ###### Provide name and approxamite line numbers where each person wrote their code
 
 #Gabriela Hernandez - Created the Code from lines 4 - 17. The rest I created the code and was the driver, while Parker assisted in writing the rest as a team effort. We had difficuty pulling the git hub link when it was forked, thus creating all the code in my file. Zacharahia did not contribute, was a no show to the project.
-#Parker Reidy - Added additional lines of code on lines 23-29 and 42-49 to check if x amount of money was added before letting user leaves. Assisted Gabriela with code structure and troubleshooting of code. 
+#Parker Reidy - Added additional lines of code on lines 23-29 and 42-49 to check if x amount of money was added before letting user leaves. Assisted Gabriela with code structure and troubleshooting of code. Added driver section, Gabriela assited and reviewed it
